@@ -52,7 +52,7 @@ def set_random_seed(seed_value=1337):
 def reverse_enumerate(iterable):
     """Enumerate over an iterable in reverse order while retaining proper indexes, without creating any copies.
     """
-    return itertools.izip(reversed(range(len(iterable))), reversed(iterable))
+    return zip(reversed(range(len(iterable))), reversed(iterable))
 
 
 def listify(value):
@@ -65,7 +65,7 @@ def listify(value):
 
 def random_array(shape, mean=128., std=20.):
     """Creates a uniformly distributed random array with the given mean and std.
-    
+
     Args:
         shape: The desired shape
         mean: The desired mean (Default value = 128)
@@ -201,11 +201,11 @@ def get_imagenet_label(indices, join=', '):
 
 def draw_text(img, text, position=(10, 10), font='FreeSans.ttf', font_size=14, color=(0, 0, 0)):
     """Draws text over the image. Requires PIL.
-    
+
     Args:
         img: The image to use.
         text: The text string to overlay.
-        position: The text (x, y) position. (Default value = (10, 10)) 
+        position: The text (x, y) position. (Default value = (10, 10))
         font: The ttf or open type font to use. (Default value = 'FreeSans.ttf')
         font_size: The text font size. (Default value = 12)
         color: The (r, g, b) values for text color. (Default value = (0, 0, 0))
@@ -230,7 +230,7 @@ def draw_text(img, text, position=(10, 10), font='FreeSans.ttf', font_size=14, c
 
 def bgr2rgb(img):
     """Converts an RGB image to BGR and vice versa
-    
+
     Args:
         img: Numpy array in RGB or BGR format
 
